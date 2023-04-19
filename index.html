@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin:0px;
+        padding:0px;
+        box-sizing:border-box;
+    }
+    body{
+        padding:20px 0px;
+    }
+    .container{
+        width:50%;
+        background-color:azure;
+        border:1px solid black;
+        margin:0 auto;
+        padding:10px;
+        
+    }
+    .tab-container{
+        display:flex;
+        justify-content:center;
+        padding:20px
+       
+    }
+    .tab-container h1{
+            width:100px;
+            padding:10px;
+            border:1px solid red;
+            margin:0 10px;
+            cursor:pointer;
+        }
+    .light-image{
+        display:flex;
+        border:1px solid yellow;
+        width:65%;
+        margin:0 auto;
+        overflow: hidden;
+        margin-bottom:10px;
+    }
+    .dark-image{
+        display:flex;
+        border:1px solid yellow;
+        width:65%;
+        margin:0 auto;
+      
+    }   
+    .musicimage{
+        width:380px
+    }
+    .tab-container h1:hover{
+        background-color:#6019ff;
+        color:#fdfdfd
+    }
+    .tab-container .active{
+        background-color:#6019ff;
+        color:#fdfdfd
+    }
+
+</style>
+<body>
+    <div class="container">
+        <div class="tab-container">
+            <h1 class="tab active " id="tab1">Tab1</h1>
+            <h1 class="tab " id="tab2">Tab2</h1>
+            <h1 class="tab " id="tab3">Tab3</h1>
+        </div>
+        <div class="light-image">
+            <div><img  class="img1" src="imagelight-forios.webp" alt=""></div>
+            <!-- <div class=""><img src="musicImagelight-forios.webp" alt=""></div> -->
+        </div>
+        <div class="dark-image">
+            <div><img  class="img1"       src="image-forios.webp" alt=""></div>
+            <!-- <div><img class="musicimage" src="musicImage-forios.webp" alt=""></div> -->
+        </div>
+    </div>
+    
+
+    <script>
+        
+        let tabs = document.querySelectorAll(".tab-container .tab");
+        tabs.forEach((tab,index)=>{
+            tab.addEventListener("click",()=>{
+                tabs.forEach((tab)=>{
+                    tab.classList.remove("active")
+                })
+                tabs[index].classList.add("active")
+            })
+        })
+
+        let tab1 = document.getElementById("tab1")
+        let tab2 = document.getElementById("tab2")
+        let tab3 = document.getElementById("tab3")
+
+        let img1 = document.querySelector(".img1")
+         
+ tab1.addEventListener('click',()=>{
+    img1.src="/imagelight-forios.webp"
+ })
+ tab2.addEventListener('click',()=>{
+    img1.src="/musicImagelight-forios.webp"
+ })
+    </script>
+</body>
+</html>
