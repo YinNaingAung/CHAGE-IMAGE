@@ -62,6 +62,12 @@
         background-color:#6019ff;
         color:#fdfdfd
     }
+    .w-200{
+        width:360px;
+    }
+    .hidden-img{
+        display:none
+    }
 
 </style>
 <body>
@@ -69,14 +75,14 @@
         <div class="tab-container">
             <h1 class="tab active " id="tab1">Tab1</h1>
             <h1 class="tab " id="tab2">Tab2</h1>
-            <h1 class="tab " id="tab3">Tab3</h1>
+            <h1 class="tab toggle-tab " id="tab3">Tab3</h1>
         </div>
-        <div class="light-image">
+        <div class="light-image toggle-light">
             <div><img  class="img1" src="imagelight-forios.webp" alt=""></div>
             <!-- <div class=""><img src="musicImagelight-forios.webp" alt=""></div> -->
         </div>
-        <div class="dark-image">
-            <div><img  class="img1"       src="image-forios.webp" alt=""></div>
+        <div class="dark-image hidden-img toggle-dark">
+            <div><img   class="img2 w-200"  src="image-forios.webp" alt=""></div>
             <!-- <div><img class="musicimage" src="musicImage-forios.webp" alt=""></div> -->
         </div>
     </div>
@@ -99,13 +105,22 @@
         let tab3 = document.getElementById("tab3")
 
         let img1 = document.querySelector(".img1")
+         let img2 = document.querySelector(".dark-image .img2")
+         let toggleTab = document.querySelector(".toggle-tab")
+         let toggleLight = document.querySelector(".toggle-light")
+         let toggleDark = document.querySelector(".toggle-dark")
          
  tab1.addEventListener('click',()=>{
-    img1.src="/imagelight-forios.webp"
+    img1.src="/imagelight-forios.webp";
+    img2.src="/image-forios.webp"
  })
  tab2.addEventListener('click',()=>{
-    img1.src="/musicImagelight-forios.webp"
+    img1.src="/musicImagelight-forios.webp";
+    img2.src="/musicImage-forios.webp"
  })
+
+
+
     </script>
 </body>
 </html>
