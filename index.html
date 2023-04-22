@@ -65,10 +65,13 @@
     .w-200{
         width:360px;
     }
-    .hidden-img{
-        display:none
+    .toggle-dark{
+           display:none
     }
-
+    .toggle-light{
+        display:block;
+    }
+             
 </style>
 <body>
     <div class="container">
@@ -81,7 +84,7 @@
             <div><img  class="img1" src="imagelight-forios.webp" alt=""></div>
             <!-- <div class=""><img src="musicImagelight-forios.webp" alt=""></div> -->
         </div>
-        <div class="dark-image hidden-img toggle-dark">
+        <div class="dark-image   toggle-dark">
             <div><img   class="img2 w-200"  src="image-forios.webp" alt=""></div>
             <!-- <div><img class="musicimage" src="musicImage-forios.webp" alt=""></div> -->
         </div>
@@ -99,6 +102,7 @@
                 tabs[index].classList.add("active")
             })
         })
+
 
         let tab1 = document.getElementById("tab1")
         let tab2 = document.getElementById("tab2")
@@ -118,7 +122,16 @@
     img1.src="/musicImagelight-forios.webp";
     img2.src="/musicImage-forios.webp"
  })
-
+ tab3.addEventListener("click",()=>{
+   if(toggleLight.style.display === "block" && toggleDark.style.display === "none"){
+        toggleLight.style.display = "none";
+        toggleDark.style.display = "block"
+   }else{
+    toggleLight.style.display = "block";
+    toggleDark.style.display = "none"
+   }
+  
+ })
 
 
     </script>
