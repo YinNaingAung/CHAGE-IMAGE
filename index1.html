@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .btn-ctn{
+        display:flex;
+        justify-content:center;
+    }
+    .flex{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-left:10px;
+        align-items:center;
+        cursor:pointer
+    }
+    .img-ctn{
+        width:100px;
+        height:100px;
+        background-color: blue;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .flex .img-ctn:hover{
+        background-color:yellow
+    }
+    .active{
+        background-color:pink
+    }
+
+</style>
+<body>
+    <div class="btn-ctn">
+        <div class="flex">
+            <div class="img-ctn tab active"><img src="apple.webp" alt=""></div>
+            <div>ios</div>
+        </div>
+        <div class="flex">
+            <div class="img-ctn tab"><img src="ios.webp" alt=""></div>
+            <div>Andriod</div>
+        </div>
+        <div class="flex">
+            <div class="img-ctn tab"><img src="custom.webp" alt=""></div>
+            <div>custom</div>
+        </div>
+    </div>
+    
+    <script>
+
+        
+    </script>
+
+</body>
+</html>
