@@ -30,30 +30,41 @@
     .flex .img-ctn:hover{
         background-color:yellow
     }
-    .active{
+    .active .tab{
+        background-color:pink
+    }
+    .active:hover .tab{
         background-color:pink
     }
 
 </style>
 <body>
     <div class="btn-ctn">
-        <div class="flex">
-            <div class="img-ctn tab active"><img src="apple.webp" alt=""></div>
+        <div class="flex active tab">
+            <div class="img-ctn tab "><img src="apple.webp" alt=""></div>
             <div>ios</div>
         </div>
-        <div class="flex">
+        <div class="flex tab">
             <div class="img-ctn tab"><img src="ios.webp" alt=""></div>
             <div>Andriod</div>
         </div>
-        <div class="flex">
+        <div class="flex tab">
             <div class="img-ctn tab"><img src="custom.webp" alt=""></div>
             <div>custom</div>
         </div>
     </div>
     
     <script>
-
+ let btnCtn = document.querySelectorAll(".tab")
         
+btnCtn.forEach((tab,index)=>{
+    tab.addEventListener("click",()=>{
+        btnCtn.forEach((tab)=>{
+            tab.classList.remove("active")
+        })
+        btnCtn[index].classList.add("active")
+    })
+})
     </script>
 
 </body>
